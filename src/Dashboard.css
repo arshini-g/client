@@ -1,0 +1,171 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+}
+
+.dashboard-header {
+  width: 100%;
+  background-color: #f8c0c8;
+  color: #ffffff;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgb(199, 228, 158);
+}
+
+.dashboard-main {
+  flex: 1;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #d3bbdd; /* Lilac background for progress bar */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #0056b3; /* Blue color for progress */
+}
+
+
+.dashboard-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #efe7d3;
+  border-radius: 0px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 15px;
+}
+
+.dashboard-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-section li {
+  display: flex;
+  flex-direction: column; 
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer; 
+}
+
+.dashboard-section li strong {
+  margin-bottom: 5px; 
+}
+
+.dashboard-section .task-description-dropdown {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f9fc; 
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #3c2d43;
+  color: #d3bbdd;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.dashboard-section button:hover {
+  color: #ece3f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-list {
+  max-height: 400px; /* Set a max height for the task list */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #bbb; /* Scrollbar thumb color */
+  border-radius: 8px; /* Scrollbar thumb shape */
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Hover effect */
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #d3bbdd;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-actions button {
+  margin-left: 8px;
+  background: transparent;
+  border: 5px solid transparent;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.task-actions button:hover {
+  color: #ece3f0;
+}
+
+.task-description {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #000000;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #d3bbdd;
+  color: rgb(77, 35, 71);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #744d84;
+}
