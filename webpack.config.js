@@ -23,38 +23,23 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env']
-          }
-        }
+        },
       },
       {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader'
-        ]
+        test: /\.svg$/,
+        loader: '@svgr/webpack',
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'static/media/[name].[hash].[ext]'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)$/i,
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
-        options: {
-          name: 'static/fonts/[name].[hash].[ext]'
-        }
-      }
-    ]
+      },
+    ],
+  },
+  resolve: {
+    alias: {
+      '@fortawesome/fontawesome-svg-core': '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/react-fontawesome': '@fortawesome/react-fontawesome',
+    },
   },
   
   plugins: [
