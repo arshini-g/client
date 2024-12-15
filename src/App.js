@@ -5,7 +5,6 @@ import Dashboard from "./Dashboard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
-
 const BASE_URL = "https://backend-i0h0.onrender.com"; // Use a common base URL here
 
 function App() {
@@ -109,7 +108,8 @@ function App() {
   };
 
   const handleLoginRedirect = () => {
-    const loginUrl = process.env.REACT_APP_LOGIN_URL + "/?next=http://192.168.0.189:3000";
+    const original = window.location.origin;
+    const loginUrl = process.env.REACT_APP_LOGIN_URL + "/?next=" + original;
     window.location.href = loginUrl;
 
   };
